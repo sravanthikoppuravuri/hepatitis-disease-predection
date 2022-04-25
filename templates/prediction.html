@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+
+   
+ font-family:Comic Sans MS;
+  margin:0;
+  height: 100%;
+  width: 100%;
+  position:fixed;
+  background-size:cover;
+ 
+}
+
+.p2
+{
+color:red;
+font-size:20px;}
+</style>
+</head>
+<body style="background-image:url('static/predict.jfif')">
+<form action="{{url_for('predict')}}" method="post">
+<TABLE ALIGN="CENTER">
+<caption>PREDICTION FORM</caption>
+
+<tr>
+<th>Age</th>
+<td><input type="number"  placeholder="Enter age" name="age" min="5" max="90"  title="value must be between 5 and 90" pattern="\d+" required><label></label></td>
+</tr>
+<tr>
+<th>Sex</th>
+<td><input type="number"  placeholder="Enter sex" min="1" max="2" name="sex" width="200" height="100" title="value must be 1 or 2 " pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Steroid</th>
+<td><input type="number" placeholder="Enter steroid" name="steroid" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Antivirals </th>
+<td><input type="number"  placeholder="Enter antivirals" name="antivirals" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Fatigue</th>
+<td><input type="number"  placeholder="Enter fatigue" name="fatigue" min="1" max="2" title="value must be 1 or 2"  pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Malaise</th>
+<td><input type="number"  placeholder="Enter malaise" name="malaise" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Anorexia </th>
+<td><input type="number"  placeholder="Enter anorexia" name="anorexia" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Liver_big</th>
+<td><input type="number" placeholder="Enter liver_big" name="liver" min="1" max="2" title="value must be 1 or 2"  pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Liver_firm</th>
+<td><input type="number"  placeholder="Enter liver firm" name="liver_firm" min="1" max="2" title="value must be 1 or 2"  pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Spleen_palable</th>
+<td><input type="number"  placeholder="Enter spleen value" name="spleen_palable" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Spiders</th>
+<td><input type="number"  placeholder="Enter spiders" name="spiders" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Ascites </th>
+<td><input type="number"  placeholder="Enter ascites" name="ascites" min="1" max="2" title="value must be 1 or 2" pattern="\d+"  required></td>
+</tr>
+<tr>
+<th>Varices</th>
+<td><input type="number"  placeholder="Enter varices" name="varices" min="1" max="2" title="value must be 1 or 2" pattern="\d+"  required></td>
+</tr>
+<tr>
+<th>Bilirubin</th>
+<td><input type="number"  placeholder="Enter Bilirubin" name="bilirubin" min="0" max="8" title="value must be  between 0 and 8" pattern="\d+"  required></td>
+</tr>
+<tr>
+<th>Alk_phosphate</th>
+<td><input type="number"  placeholder="Enter phospate" name="alk_phosphate" min="20" max="295" title="value must be  between 20 and 295" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Sgot</th>
+<td><input type="number"  placeholder="Enter sgot" name="sgot" min="10" max="700"  title="value must be  between 10 and 700" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Albumin</th>
+<td><input type="number"  placeholder="Enter albumin" name="albumin" min="2" max="7" title="value must be  between 2 and 7" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Protime</th>
+<td><input type="number"  placeholder="Enter protine" name="protime" min="0" max="100" title="value must be  between 0 and 100" pattern="\d+" required></td>
+</tr>
+<tr>
+<th>Class</th>
+<td><input type="number" placeholder="Enter value" name="histology" min="1" max="2" title="value must be 1 or 2" pattern="\d+" required></td>
+</tr>
+
+<tr>
+<td><button type="submit">submit</td>
+</form>
+ <td><form method="get" action="/prediction"><button type="result">reset</form></td></tr>
+     
+</tr>
+</table>
+<center><p class="p2"> <h4>{{prediction_result}}</h4></p></center>
+<p style="margin-left:200px">
+<form method="get" action="/">
+    <button type="submit">Back To Home</button>
+</form>
+</p>
+
+
+</body>
+</html>
+
+
+
+
+
+
